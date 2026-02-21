@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-accent-yellow: var(--accent-yellow);
+  
+  --font-nunito: "Nunito", sans-serif;
+  --font-merriweather: "Merriweather", serif;
+  
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-3xl: 2.5rem;
+}
+
+:root {
+  --primary: #FF9F76;
+  --primary-hover: #FF8A5B;
+  --background: #FFF9F0;
+  --surface: #FFFFFF;
+  --accent-yellow: #FFD56B;
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    font-family: var(--font-nunito);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Legal prose styling */
+.prose-legal h2 {
+  font-family: 'Nunito', sans-serif;
+  color: #4A403A;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.prose-legal p {
+  font-family: 'Merriweather', serif;
+  color: #4B5563;
+  line-height: 1.8;
+  margin-bottom: 1.5em;
+}
+
+.prose-legal ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  margin-bottom: 1.5em;
+  font-family: 'Merriweather', serif;
+  color: #4B5563;
+}
+
+.prose-legal li {
+  margin-bottom: 0.5em;
+}
