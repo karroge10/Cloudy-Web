@@ -68,7 +68,7 @@ export function LegalClient() {
                 </nav>
                 <div className="mt-8 pt-6 border-t border-gray-100">
                   <p className="text-xs text-gray-400 mb-2">Last updated</p>
-                  <p className="text-sm font-semibold text-gray-700">February 14, 2026</p>
+                  <p className="text-sm font-semibold text-gray-700">February 24, 2026</p>
                 </div>
               </div>
             </aside>
@@ -78,7 +78,7 @@ export function LegalClient() {
               <section id="privacy" className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-orange-50 scroll-mt-28 transition-all hover:shadow-md">
                 <div className="prose-legal max-w-none">
                   <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 font-nunito">Privacy Policy</h1>
-                  <p className="text-lg text-gray-500 font-nunito mb-8">Last Updated: February 14, 2026</p>
+                  <p className="text-lg text-gray-500 font-nunito mb-8">Last Updated: February 24, 2026</p>
                   
                   <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">1. Introduction</h2>
                   <p className="text-gray-600 mb-4">
@@ -105,7 +105,7 @@ export function LegalClient() {
                   
                   <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">5. Data Deletion</h2>
                   <p className="text-gray-600 mb-4">
-                    You have the right to delete your account and all associated data at any time through the &quot;Delete Account&quot; option in the Profile settings.
+                    You have the right to delete your account and all associated data at any time through the &quot;Delete Account&quot; option in the Profile settings. <strong>To delete your data via email, contact me at <a href="mailto:egorkabantsov@gmail.com" className="text-primary hover:underline">egorkabantsov@gmail.com</a>.</strong>
                   </p>
                   
                   <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">6. Changes to This Policy</h2>
@@ -119,7 +119,7 @@ export function LegalClient() {
               <section id="terms" className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-orange-50 scroll-mt-28 transition-all hover:shadow-md">
                 <div className="prose-legal max-w-none">
                   <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 font-nunito">Terms of Service</h1>
-                  <p className="text-lg text-gray-500 font-nunito mb-8">Last Updated: February 14, 2026</p>
+                  <p className="text-lg text-gray-500 font-nunito mb-8">Last Updated: February 24, 2026</p>
                   
                   <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">1. Acceptance of Terms</h2>
                   <p className="text-gray-600 mb-4">
@@ -157,7 +157,7 @@ export function LegalClient() {
               <section id="cookies" className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-orange-50 scroll-mt-28 transition-all hover:shadow-md">
                 <div className="prose-legal max-w-none">
                   <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2 font-nunito">Cookie Policy</h1>
-                  <p className="text-lg text-gray-500 font-nunito mb-8">Last Updated: February 14, 2026</p>
+                  <p className="text-lg text-gray-500 font-nunito mb-8">Last Updated: February 24, 2026</p>
                   
                   <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">1. What Are Cookies</h2>
                   <p className="text-gray-600 mb-4">
