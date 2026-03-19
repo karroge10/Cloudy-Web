@@ -5,13 +5,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Shield, Flame, PawPrint, Check } from 'lucide-react'
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [touchStart, setTouchStart] = useState<number | null>(null)
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
-  
+
   const screenshots = [
     '/images/screenshotMain.png',
     '/images/screenshotInspector.png',
@@ -56,11 +56,11 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      
+
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="min-h-[calc(100vh-80px)] flex items-center pt-8 md:pt-16 pb-16 md:pb-24 px-6 overflow-hidden relative">
-          <div className="max-w-6xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-3 md:gap-12 items-center w-full relative z-10">
+        <section className="h-[calc(100vh-80px)] min-h-[600px] flex flex-col items-center justify-center py-8 md:py-12 lg:py-16 px-6 overflow-hidden relative">
+          <div className="max-w-6xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center justify-center w-full relative z-10 flex-1">
             {/* Mobile Pill (Only visible on mobile, above screenshot) */}
             <div className="lg:hidden animate-fade-in">
               <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-orange-100">
@@ -82,8 +82,8 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col gap-4 pt-2 items-center lg:items-start w-full sm:w-auto">
                 <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                  <Link 
-                    href="https://play.google.com/store/apps/details?id=app.cloudy.journal" 
+                  <Link
+                    href="https://play.google.com/store/apps/details?id=app.cloudy.journal"
                     target="_blank"
                     className="flex items-center justify-center gap-3 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-orange-200 transition-all transform hover:-translate-y-1 active:scale-95 cursor-pointer w-full"
                   >
@@ -100,23 +100,23 @@ export default function HomePage() {
             </div>
 
             {/* App Preview Carousel */}
-            <div 
-              className="relative group lg:h-[600px] flex items-center justify-center animate-fade-in order-1 lg:order-2 w-full -mt-2" 
+            <div
+              className="relative group flex items-center justify-center animate-fade-in order-1 lg:order-2 w-full -mt-2 lg:mt-0"
               style={{ animationDelay: '0.2s' }}
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
             >
-              <div className="relative w-full max-w-[180px] md:max-w-[300px] flex flex-col items-center">
+              <div className="relative w-full max-w-[180px] md:max-w-[min(240px,30vh)] xl:max-w-[min(300px,35vh)] flex flex-col items-center">
                 <div className="relative w-full aspect-[9/18.5] flex items-center justify-center overflow-visible">
                   {screenshots.map((src, index) => (
-                    <div 
+                    <div
                       key={index}
                       className={`absolute inset-0 transition-all duration-700 ease-in-out ${index === currentSlide ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-95 z-0'}`}
                     >
-                      <Image 
-                        src={src} 
-                        alt={`Cloudy App Screenshot ${index + 1}`} 
+                      <Image
+                        src={src}
+                        alt={`Cloudy App Screenshot ${index + 1}`}
                         fill
                         className="object-contain"
                         priority={index === 0}
@@ -127,13 +127,13 @@ export default function HomePage() {
 
                 {screenshots.length > 1 && (
                   <>
-                    <button 
+                    <button
                       onClick={prevSlide}
                       className="absolute left-[-40px] md:left-[-60px] top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-2 rounded-full shadow-md text-gray-800 transition-all opacity-0 group-hover:opacity-100 cursor-pointer border border-orange-50 active:scale-95 z-30"
                     >
                       <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
                     </button>
-                    <button 
+                    <button
                       onClick={nextSlide}
                       className="absolute right-[-40px] md:right-[-60px] top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-2 rounded-full shadow-md text-gray-800 transition-all opacity-0 group-hover:opacity-100 cursor-pointer border border-orange-50 active:scale-95 z-30"
                     >
@@ -163,13 +163,13 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">The most peaceful workflow imaginable.</h2>
               <p className="text-gray-600 text-lg">Built so you&apos;ll actually want to open it and track your daily moments of joy.</p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Privacy & Encryption Card */}
               <div className="bg-background rounded-3xl p-6 md:p-8 hover:shadow-xl transition-shadow duration-300 group flex flex-col">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                    <span className="material-icons text-2xl md:text-3xl text-primary" aria-hidden="true">security</span>
+                    <Shield className="w-6 h-6 md:w-8 md:h-8 text-primary" strokeWidth={2.5} aria-hidden="true" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 leading-tight">Privacy & Encryption</h3>
                 </div>
@@ -177,7 +177,7 @@ export default function HomePage() {
                   <div className="w-28 h-28 relative">
                     <Image src="/images/mascot_lock.png" alt="Privacy Mascot" fill className="object-contain drop-shadow-sm" />
                     <div className="absolute top-0 right-0 w-8 h-8 bg-green-400 rounded-full border-4 border-white flex items-center justify-center shadow-sm">
-                      <span className="material-icons text-white text-xs" aria-hidden="true">check</span>
+                      <Check className="w-4 h-4 text-white" strokeWidth={4} aria-hidden="true" />
                     </div>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ export default function HomePage() {
               <div className="bg-background rounded-3xl p-6 md:p-8 hover:shadow-xl transition-shadow duration-300 group flex flex-col">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                    <span className="material-icons text-2xl md:text-3xl text-primary" aria-hidden="true">local_fire_department</span>
+                    <Flame className="w-6 h-6 md:w-8 md:h-8 text-primary" strokeWidth={2.5} aria-hidden="true" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 leading-tight">Track Progress</h3>
                 </div>
@@ -199,7 +199,7 @@ export default function HomePage() {
                     ))}
                   </div>
                   <div className="mt-4 flex items-center gap-2 bg-background px-4 py-1.5 rounded-full shadow-sm border border-orange-100">
-                    <span className="material-icons text-primary text-sm" aria-hidden="true">local_fire_department</span>
+                    <Flame className="w-4 h-4 text-primary relative -top-px" strokeWidth={3} aria-hidden="true" />
                     <span className="text-sm font-black text-gray-900">12 Days Streak</span>
                   </div>
                 </div>
@@ -210,7 +210,7 @@ export default function HomePage() {
               <div className="bg-background rounded-3xl p-6 md:p-8 hover:shadow-xl transition-shadow duration-300 group flex flex-col">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                    <span className="material-icons text-2xl md:text-3xl text-primary" aria-hidden="true">pets</span>
+                    <PawPrint className="w-6 h-6 md:w-8 md:h-8 text-primary" strokeWidth={2.5} aria-hidden="true" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 leading-tight">Meet Companions</h3>
                 </div>
@@ -245,7 +245,7 @@ export default function HomePage() {
                     Writing just one thing a day changed my perspective, and I built this so it could do the same for you. If it helps you even a little, I’d love to hear your story.
                   </p>
                 </div>
-                
+
                 <div className="flex flex-wrap items-center gap-6 pt-4 border-t border-orange-50">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 rounded-full bg-gray-100 overflow-hidden relative border border-orange-100 flex-shrink-0">
@@ -256,9 +256,9 @@ export default function HomePage() {
                       <p className="text-xs text-gray-500">Solo Developer</p>
                     </div>
                   </div>
-                  
+
                   <div className="hidden sm:block h-8 w-px bg-orange-100"></div>
-                  
+
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center relative overflow-hidden flex-shrink-0 shadow-sm">
                       <Image src="/images/icon.png" alt="Cloudy" fill className="object-contain" />
@@ -270,14 +270,14 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="w-full md:w-1/3 flex justify-center">
                 <div className="w-48 h-48 md:w-64 md:h-64 bg-orange-50 rounded-full flex items-center justify-center relative overflow-visible flex-shrink-0">
                   <div className="absolute inset-0 border-2 border-dashed border-primary/30 rounded-full animate-[spin_20s_linear_infinite]"></div>
                   <div className="w-32 h-32 md:w-48 md:h-48 relative drop-shadow-xl hover:scale-110 transition-transform duration-500">
                     <Image src="/images/mascot_hello.png" alt="Cloudy Mascot" fill className="object-contain" />
                   </div>
-                  <Link 
+                  <Link
                     href="https://play.google.com/store/apps/details?id=app.cloudy.journal"
                     target="_blank"
                     className="absolute -bottom-2 md:-bottom-2 -right-2 md:-right-2 bg-white px-3 md:px-4 py-1.5 md:py-2 rounded-xl shadow-lg border border-orange-100 cursor-pointer active:scale-95 transition-transform hover:scale-105 z-10"

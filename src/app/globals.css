@@ -4,16 +4,30 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Scale down the entire UI on laptop screens (up to 1080p without scaling) */
+@media (min-width: 1024px) and (max-width: 1920px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+/* Scale down slightly more on smaller laptops/tablets in landscape */
+@media (min-width: 768px) and (max-width: 1023px) {
+  html {
+    font-size: 85%;
+  }
+}
+
 @theme {
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
   --color-background: var(--background);
   --color-surface: var(--surface);
   --color-accent-yellow: var(--accent-yellow);
-  
+
   --font-nunito: "Nunito", sans-serif;
   --font-merriweather: "Merriweather", serif;
-  
+
   --radius-xl: 1.5rem;
   --radius-2xl: 2rem;
   --radius-3xl: 2.5rem;
@@ -35,8 +49,15 @@ html {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {
