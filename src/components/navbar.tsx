@@ -69,8 +69,15 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <Link
               href="https://play.google.com/store/apps/details?id=app.cloudy.journal"
-              className="bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-full font-bold shadow-lg shadow-orange-200 transition-all transform active:scale-95 hidden sm:block cursor-pointer"
+              target="_blank"
+              className="bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-full font-bold shadow-lg shadow-orange-200 transition-all transform active:scale-95 hidden sm:flex items-center gap-2 cursor-pointer"
             >
+              <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 20.5V3.5C3 2.9 3.2 2.4 3.7 2.1L12.5 12L3.7 21.9C3.2 21.6 3 21.1 3 20.5Z" fill="#00E5FF"/>
+                <path d="M17.4 14.8L12.5 12L3.7 21.9C4 22.1 4.5 22.2 5 21.9L17.4 14.8Z" fill="#FF3D00"/>
+                <path d="M21 12.7C21.4 12.4 21.4 11.6 21 11.3L17.4 9.2L12.5 12L17.4 14.8L21 12.7Z" fill="#FFC107"/>
+                <path d="M17.4 9.2L5 2.1C4.5 1.8 4 1.9 3.7 2.1L12.5 12L17.4 9.2Z" fill="#4CAF50"/>
+              </svg>
               Download
             </Link>
             <button
@@ -105,9 +112,16 @@ export function Navbar() {
             ))}
             <Link
               href="https://play.google.com/store/apps/details?id=app.cloudy.journal"
-              className="bg-primary hover:bg-primary-hover text-white px-6 py-4 rounded-2xl font-bold text-center shadow-xl shadow-orange-200 transition-all active:scale-95 cursor-pointer mt-4"
+              target="_blank"
+              className="bg-primary hover:bg-primary-hover text-white px-6 py-4 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-xl shadow-orange-200 transition-all active:scale-95 cursor-pointer mt-4"
               tabIndex={isMenuOpen ? 0 : -1}
             >
+              <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 20.5V3.5C3 2.9 3.2 2.4 3.7 2.1L12.5 12L3.7 21.9C3.2 21.6 3 21.1 3 20.5Z" fill="#00E5FF"/>
+                <path d="M17.4 14.8L12.5 12L3.7 21.9C4 22.1 4.5 22.2 5 21.9L17.4 14.8Z" fill="#FF3D00"/>
+                <path d="M21 12.7C21.4 12.4 21.4 11.6 21 11.3L17.4 9.2L12.5 12L17.4 14.8L21 12.7Z" fill="#FFC107"/>
+                <path d="M17.4 9.2L5 2.1C4.5 1.8 4 1.9 3.7 2.1L12.5 12L17.4 9.2Z" fill="#4CAF50"/>
+              </svg>
               Download Cloudy
             </Link>
           </div>

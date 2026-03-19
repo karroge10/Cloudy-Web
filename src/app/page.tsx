@@ -87,8 +87,12 @@ export default function HomePage() {
                     target="_blank"
                     className="flex items-center justify-center gap-3 bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-orange-200 transition-all transform hover:-translate-y-1 active:scale-95 cursor-pointer w-full"
                   >
-                    <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M17.523 15.3414C18.173 15.3414 18.701 14.8134 18.701 14.1634C18.701 13.5134 18.173 12.9854 17.523 12.9854C16.873 12.9854 16.345 13.5134 16.345 14.1634C16.345 14.8134 16.873 15.3414 17.523 15.3414ZM6.477 15.3414C7.127 15.3414 7.655 14.8134 7.655 14.1634C7.655 13.5134 7.127 12.9854 6.477 12.9854C5.827 12.9854 5.299 13.5134 5.299 14.1634C5.299 14.8134 5.827 15.3414 6.477 15.3414ZM17.864 11.2364L19.866 7.76941C20.013 7.51441 19.926 7.18841 19.672 7.04041C19.416 6.89241 19.09 6.98041 18.943 7.23441L16.904 10.7634C15.42 10.0894 13.774 9.71141 12 9.71141C10.226 9.71141 8.58 10.0894 7.096 10.7634L5.057 7.23441C4.91 6.98041 4.584 6.89241 4.328 7.04041C4.074 7.18841 3.987 7.51441 4.134 7.76941L6.136 11.2364C2.551 13.1594 0.122 16.8914 0 21.2654H24C23.878 16.8914 21.449 13.1594 17.864 11.2364Z" />
+                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.523 15.3414C18.173 15.3414 18.701 14.8134 18.701 14.1634..." className="hidden" /> {/* Old path placeholder */}
+                      <path d="M3 20.5V3.5C3 2.9 3.2 2.4 3.7 2.1L12.5 12L3.7 21.9C3.2 21.6 3 21.1 3 20.5Z" fill="#00E5FF"/>
+                      <path d="M17.4 14.8L12.5 12L3.7 21.9C4 22.1 4.5 22.2 5 21.9L17.4 14.8Z" fill="#FF3D00"/>
+                      <path d="M21 12.7C21.4 12.4 21.4 11.6 21 11.3L17.4 9.2L12.5 12L17.4 14.8L21 12.7Z" fill="#FFC107"/>
+                      <path d="M17.4 9.2L5 2.1C4.5 1.8 4 1.9 3.7 2.1L12.5 12L17.4 9.2Z" fill="#4CAF50"/>
                     </svg>
                     Download on Play Store
                   </Link>

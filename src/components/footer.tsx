@@ -40,7 +40,7 @@ export function Footer() {
               <li><Link href="/#features" className="hover:text-primary transition-colors">Features</Link></li>
               <li><Link href="/#about" className="hover:text-primary transition-colors">About</Link></li>
               <li><Link href="/feedback" className="hover:text-primary transition-colors">Support</Link></li>
-              <li><Link href="https://play.google.com/store/apps/details?id=app.cloudy.journal" className="hover:text-primary transition-colors">Download</Link></li>
+              <li><Link href="https://play.google.com/store/apps/details?id=app.cloudy.journal" target="_blank" className="hover:text-primary transition-colors">Available on Google Play</Link></li>
             </ul>
           </div>
           <div>
