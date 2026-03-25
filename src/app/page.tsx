@@ -59,8 +59,8 @@ export default function HomePage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="h-[calc(100vh-80px)] min-h-[600px] flex flex-col items-center justify-center py-8 md:py-12 lg:py-16 px-6 overflow-hidden relative">
-          <div className="max-w-6xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center justify-center w-full relative z-10 flex-1">
+        <section className="min-h-[calc(100svh-80px)] md:min-h-[600px] flex flex-col items-center justify-center py-4 md:py-12 lg:py-16 px-6 overflow-hidden relative">
+          <div className="max-w-6xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-4 md:gap-12 items-center justify-center w-full relative z-10 flex-1">
             {/* Mobile Pill (Only visible on mobile, above screenshot) */}
             <div className="lg:hidden animate-fade-in">
               <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-orange-100">
@@ -69,18 +69,18 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="space-y-4 md:space-y-8 animate-fade-in lg:pr-10 order-2 lg:order-1 text-center lg:text-left">
+            <div className="space-y-4 md:space-y-8 animate-fade-in lg:pr-10 order-2 lg:order-1 text-center lg:text-left w-full mt-auto mb-4 md:mb-0">
               <div className="hidden lg:inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-orange-100">
                 <span className="bg-orange-100 text-orange-600 text-[10px] font-bold px-2 py-1 rounded-md leading-none flex items-center justify-center">NEW</span>
                 <span className="text-sm font-medium text-gray-600">Cloudy is now live on Android</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
                 Start your daily gratitude habit
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <p className="text-base md:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 Your peaceful companion for daily mindfulness. Built with love to help you focus on the good stuff.
               </p>
-              <div className="flex flex-col gap-4 pt-2 items-center lg:items-start w-full sm:w-auto">
+              <div className="flex flex-col gap-3 pt-2 items-center lg:items-start w-full sm:w-auto">
                 <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                   <Link
                     href="https://play.google.com/store/apps/details?id=app.cloudy.journal"
@@ -105,13 +105,13 @@ export default function HomePage() {
 
             {/* App Preview Carousel */}
             <div
-              className="relative group flex items-center justify-center animate-fade-in order-1 lg:order-2 w-full -mt-2 lg:mt-0"
+              className="relative group flex items-center justify-center animate-fade-in order-1 lg:order-2 w-full -mt-2 lg:mt-0 flex-1"
               style={{ animationDelay: '0.2s' }}
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
             >
-              <div className="relative w-full max-w-[180px] md:max-w-[min(240px,30vh)] xl:max-w-[min(300px,35vh)] flex flex-col items-center">
+              <div className="relative w-full max-w-[min(160px,25vh)] md:max-w-[min(240px,30vh)] xl:max-w-[min(300px,35vh)] flex flex-col items-center">
                 <div className="relative w-full aspect-[9/18.5] flex items-center justify-center overflow-visible">
                   {screenshots.map((src, index) => (
                     <div
