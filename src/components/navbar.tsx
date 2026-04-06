@@ -48,7 +48,7 @@ export function Navbar() {
             onClick={handleLogoClick}
             className="flex items-center gap-3 cursor-pointer group"
           >
-            <div className="w-10 h-10 min-w-[40px] aspect-square rounded-full bg-white flex items-center justify-center shadow-sm relative overflow-hidden group-hover:scale-105 transition-transform flex-shrink-0">
+            <div className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white shadow-sm transition-transform group-hover:scale-105">
               <Image src="/images/icon.png" alt="Cloudy" fill sizes="40px" className="object-contain" />
             </div>
             <span className="text-2xl font-bold tracking-tight text-gray-900">Cloudy</span>

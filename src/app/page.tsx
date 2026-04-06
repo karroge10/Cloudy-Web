@@ -59,8 +59,8 @@ export default function HomePage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="min-h-[calc(100svh-80px)] md:min-h-[600px] flex flex-col items-center justify-center py-4 md:py-12 lg:py-16 px-6 overflow-hidden relative">
-          <div className="max-w-6xl mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-4 md:gap-12 items-center justify-center w-full relative z-10 flex-1">
+        <section className="relative flex min-h-[calc(100svh-5rem)] flex-col items-center justify-center overflow-hidden bg-background px-6 py-6 md:py-10 lg:py-12">
+          <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-6 md:gap-10 lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
             {/* Mobile Pill (Only visible on mobile, above screenshot) */}
             <div className="lg:hidden animate-fade-in">
               <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-orange-100">
@@ -69,7 +69,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="space-y-4 md:space-y-8 animate-fade-in lg:pr-10 order-2 lg:order-1 text-center lg:text-left w-full mt-auto mb-4 md:mb-0">
+            <div className="order-2 w-full animate-fade-in space-y-4 text-center md:space-y-8 lg:order-1 lg:pr-10 lg:text-left">
               <div className="hidden lg:inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-orange-100">
                 <span className="bg-orange-100 text-orange-600 text-[10px] font-bold px-2 py-1 rounded-md leading-none flex items-center justify-center">NEW</span>
                 <span className="text-sm font-medium text-gray-600">Cloudy is now live on Android</span>
@@ -105,7 +105,7 @@ export default function HomePage() {
 
             {/* App Preview Carousel */}
             <div
-              className="relative group flex items-center justify-center animate-fade-in order-1 lg:order-2 w-full -mt-2 lg:mt-0 flex-1"
+              className="relative order-1 flex w-full animate-fade-in items-center justify-center group lg:order-2"
               style={{ animationDelay: '0.2s' }}
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
